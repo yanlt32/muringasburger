@@ -109,6 +109,73 @@ input, select { font: inherit; }
 }
 
 /* ==========================================================================
+   Splash screen
+   ========================================================================== */
+
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 38%, #241b17 0%, var(--ink-900) 68%);
+  animation: splashOut 0.5s ease 1.15s forwards;
+}
+
+.splash-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.splash-logo {
+  width: 132px;
+  height: auto;
+  filter: drop-shadow(0 12px 28px rgba(196, 30, 36, 0.4));
+  animation: splashPulse 1s var(--ease-out) both;
+}
+
+.splash-bar {
+  width: 96px;
+  height: 3px;
+  margin-top: var(--sp-5);
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+.splash-bar span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--red-500);
+  border-radius: var(--radius-full);
+  animation: splashBar 0.9s var(--ease-out) 0.15s forwards;
+}
+
+@keyframes splashPulse {
+  0% { opacity: 0; transform: scale(0.82); }
+  55% { opacity: 1; transform: scale(1.05); }
+  75% { transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes splashBar {
+  to { width: 100%; }
+}
+
+@keyframes splashOut {
+  to { opacity: 0; visibility: hidden; pointer-events: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash-screen { animation: splashOut 0.3s ease 0.5s forwards; }
+  .splash-logo { animation: none; opacity: 1; }
+  .splash-bar span { animation: none; width: 100%; }
+}
+
+/* ==========================================================================
    Layout helpers
    ========================================================================== */
 
