@@ -32,18 +32,30 @@
   onScroll();
 
   var navToggle = document.getElementById("navToggle");
+  var navClose = document.getElementById("navClose");
   var mobileNav = document.getElementById("mobileNav");
+
+  function openMobileNav() {
+    mobileNav.classList.add("is-open");
+    navToggle.setAttribute("aria-expanded", "true");
+    document.body.classList.add("nav-open");
+  }
+  function closeMobileNav() {
+    mobileNav.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("nav-open");
+  }
+
   navToggle.addEventListener("click", function () {
-    var isOpen = mobileNav.classList.toggle("is-open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-    document.body.classList.toggle("nav-open", isOpen);
+    if (mobileNav.classList.contains("is-open")) closeMobileNav();
+    else openMobileNav();
   });
+  navClose.addEventListener("click", closeMobileNav);
   mobileNav.querySelectorAll("a").forEach(function (a) {
-    a.addEventListener("click", function () {
-      mobileNav.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("nav-open");
-    });
+    a.addEventListener("click", closeMobileNav);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && mobileNav.classList.contains("is-open")) closeMobileNav();
   });
 
   document.getElementById("fabTop").addEventListener("click", function () {

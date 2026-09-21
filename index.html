@@ -109,6 +109,9 @@
 
 <!-- Mobile nav -->
 <div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="navClose" aria-label="Fechar menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
   <nav aria-label="Navegação mobile">
     <ul>
       <li><a href="#sobre">Sobre</a></li>
@@ -142,7 +145,7 @@
         Est. 2021 · Zona Leste de São Paulo
       </span>
       <h1>O sabor que virou <em>tradição</em> na Zona Leste</h1>
-      <p class="hero-lede">Smash burgers, fritas crocantes e BBQ defumado na casa. Mais de 250 mil pedidos em 2025 e uma comunidade de 132 mil pessoas que não vivem sem o Muringa's.</p>
+      <p class="hero-lede">Smash burgers, fritas crocantes e BBQ defumado na casa. Mais de 250 mil pedidos em 2025 e uma legião de fãs que não vivem sem o Muringa's.</p>
 
       <div class="hero-actions">
         <a href="#cardapio" class="btn btn-primary btn-lg">Ver cardápio</a>
@@ -150,7 +153,6 @@
       </div>
 
       <div class="hero-stats">
-        <div class="hero-stat"><strong>132 mil</strong><span>Seguidores</span></div>
         <div class="hero-stat"><strong>+250 mil</strong><span>Pedidos em 2025</span></div>
         <div class="hero-stat"><strong>3%</strong><span>Cashback na hora</span></div>
         <div class="hero-stat"><strong>2021</strong><span>Tradição desde</span></div>
@@ -163,11 +165,11 @@
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track" id="marqueeTrack">
       <!-- items injected twice via JS-friendly duplication below -->
-      <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Sem pedido mínimo</span>
-      <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 3% de cashback em todo pedido</span>
-      <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Delivery e retirada todos os dias</span>
-      <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Smash burgers 100% artesanais</span>
-      <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> +250 mil pedidos em 2025</span>
+      <span class="marquee-item"><svg class="burger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9a9 5 0 0 1 18 0"/><path d="M3 9h18"/><path d="M2.5 13h19"/><path d="M3 17h18"/><path d="M4 17c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5"/></svg> Sem pedido mínimo</span>
+      <span class="marquee-item"><svg class="burger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9a9 5 0 0 1 18 0"/><path d="M3 9h18"/><path d="M2.5 13h19"/><path d="M3 17h18"/><path d="M4 17c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5"/></svg> 3% de cashback em todo pedido</span>
+      <span class="marquee-item"><svg class="burger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9a9 5 0 0 1 18 0"/><path d="M3 9h18"/><path d="M2.5 13h19"/><path d="M3 17h18"/><path d="M4 17c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5"/></svg> Delivery e retirada todos os dias</span>
+      <span class="marquee-item"><svg class="burger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9a9 5 0 0 1 18 0"/><path d="M3 9h18"/><path d="M2.5 13h19"/><path d="M3 17h18"/><path d="M4 17c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5"/></svg> Smash burgers 100% artesanais</span>
+      <span class="marquee-item"><svg class="burger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9a9 5 0 0 1 18 0"/><path d="M3 9h18"/><path d="M2.5 13h19"/><path d="M3 17h18"/><path d="M4 17c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5"/></svg> +250 mil pedidos em 2025</span>
     </div>
   </div>
 
@@ -175,7 +177,7 @@
   <section class="section" id="sobre">
     <div class="container about">
       <div class="about-media">
-        <img src="assets/img/gallery-6.jpg" alt="Smash burger duplo do Muringa's com queijo cremoso, acompanhado de batata frita" loading="lazy" width="1600" height="1067">
+        <img src="assets/img/2disco.png" alt="Smash burger duplo do Muringa's com queijo cremoso, acompanhado de batata frita" loading="lazy" width="1600" height="1067">
         <div class="about-media-badge">
           <strong>Est. 2021</strong>
           <span>Tradição na Zona Leste</span>
@@ -185,7 +187,7 @@
         <span class="eyebrow">Nossa história</span>
         <h2>Feito na chapa, com carinho de quem é da Zona Leste</h2>
         <p>O Muringa's nasceu em 2021 com uma missão simples: fazer o melhor smash burger da Zona Leste de São Paulo. Carne prensada na chapa quente, pão brioche macio, queijo cheddar derretido e molhos feitos em casa — sem atalhos.</p>
-        <p>Hoje já são mais de 250 mil pedidos em 2025 e uma comunidade de 132 mil seguidores que acompanham cada lançamento, evento e sabor novo direto no Instagram.</p>
+        <p>Hoje já são mais de 250 mil pedidos em 2025 e uma comunidade enorme que acompanha cada lançamento, evento e sabor novo direto no Instagram.</p>
 
         <ul class="about-list">
           <li>
